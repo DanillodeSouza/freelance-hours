@@ -23,7 +23,7 @@ class ProjectFactory extends Factory
             'description' => htmlspecialchars(fake()->randomHtml()),
             'ends_at' => fake()->dateTimeBetween('now', '+ 3 days'),
             'created_by' => User::factory(),
-            'tech_stack' => fake()->randomElements(['react', 'php', 'laravel', 'vue', 'tailwindcss', 'javascript', 'nextjs', 'python'], random_int(1, 5)),
+            'tech_stack' => fake()->randomElements(['react', 'javascript', 'nextjs'], random_int(1, 3)),
             'status' => fake()->randomElement(['open', 'closed']),
         ];
     }
